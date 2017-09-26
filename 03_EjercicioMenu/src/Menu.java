@@ -62,6 +62,7 @@ public class Menu {
 	 */
 	private void initialize() {
 		frmMenuPrueba = new JFrame();
+		frmMenuPrueba.setResizable(false);
 		frmMenuPrueba.setTitle("Menu Prueba");
 		frmMenuPrueba.setBounds(100, 100, 593, 446);
 		frmMenuPrueba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
