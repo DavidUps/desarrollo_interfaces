@@ -24,6 +24,9 @@ import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import javax.swing.ButtonGroup;
 import java.awt.Font;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.JScrollPane;
 
 public class Menu {
 
@@ -180,5 +183,27 @@ public class Menu {
 		lblNewLabel_6.setIcon(new ImageIcon(Menu.class.getResource("/com/sun/javafx/scene/control/skin/caspian/dialog-warning.png")));
 		lblNewLabel_6.setBounds(17, 262, 223, 52);
 		frmMenuPrueba.getContentPane().add(lblNewLabel_6);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(317, 301, 157, 56);
+		frmMenuPrueba.getContentPane().add(scrollPane);
+		
+		JList list = new JList();
+		list.setFont(new Font("Consolas", Font.PLAIN, 11));
+		scrollPane.setViewportView(list);
+		list.setModel(new AbstractListModel() {
+			String[] values = new String[] {"Madrid", "Sevilla", "\u00C1vila", "Toledo", "Segovia", "Pamplona", "Cadiz"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+		
+		JLabel lblNewLabel_7 = new JLabel("Ciudad");
+		lblNewLabel_7.setFont(new Font("Consolas", Font.PLAIN, 11));
+		lblNewLabel_7.setBounds(317, 280, 46, 14);
+		frmMenuPrueba.getContentPane().add(lblNewLabel_7);
 	}
 }
