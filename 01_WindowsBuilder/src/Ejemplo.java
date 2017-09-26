@@ -9,12 +9,17 @@ import javax.swing.JCheckBox;
 import javax.swing.ButtonGroup;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JPasswordField;
 
 public class Ejemplo {
 
 	private JFrame frame;
 	private JTextField txtSoyUnJtextfield;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JPasswordField passwordField;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -49,31 +54,31 @@ public class Ejemplo {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblSoyUnJLABEL = new JLabel("SOY UN JLABEL");
-		lblSoyUnJLABEL.setBounds(85, 76, 76, 14);
+		lblSoyUnJLABEL.setBounds(93, 76, 153, 14);
 		frame.getContentPane().add(lblSoyUnJLABEL);
 		
 		JButton btnNewButton = new JButton("SOY UN JBUTON");
-		btnNewButton.setBounds(171, 72, 111, 23);
+		btnNewButton.setBounds(256, 72, 140, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 		txtSoyUnJtextfield = new JTextField();
 		txtSoyUnJtextfield.setText("SOY UN JTEXTFIELD");
-		txtSoyUnJtextfield.setBounds(161, 101, 111, 20);
+		txtSoyUnJtextfield.setBounds(95, 101, 254, 20);
 		frame.getContentPane().add(txtSoyUnJtextfield);
 		txtSoyUnJtextfield.setColumns(10);
 		
 		JRadioButton rdbtnSoyUnJradiobutton = new JRadioButton("SOY UN JRADIOBUTTON");
 		buttonGroup.add(rdbtnSoyUnJradiobutton);
-		rdbtnSoyUnJradiobutton.setBounds(161, 128, 174, 23);
+		rdbtnSoyUnJradiobutton.setBounds(29, 127, 174, 23);
 		frame.getContentPane().add(rdbtnSoyUnJradiobutton);
 		
 		JCheckBox chckbxSoyUnCheckbox = new JCheckBox("SOY UN CHECKBOX");
-		chckbxSoyUnCheckbox.setBounds(161, 179, 140, 23);
+		chckbxSoyUnCheckbox.setBounds(29, 179, 140, 23);
 		frame.getContentPane().add(chckbxSoyUnCheckbox);
 		
 		JRadioButton rdbtnSoyUnJradiobutton_1 = new JRadioButton("SOY UN JRADIOBUTTON 2");
 		buttonGroup.add(rdbtnSoyUnJradiobutton_1);
-		rdbtnSoyUnJradiobutton_1.setBounds(161, 153, 174, 23);
+		rdbtnSoyUnJradiobutton_1.setBounds(29, 153, 174, 23);
 		frame.getContentPane().add(rdbtnSoyUnJradiobutton_1);
 		
 		JButton btnAceptar = new JButton("Aceptar");
@@ -84,5 +89,27 @@ public class Ejemplo {
 		});
 		btnAceptar.setBounds(363, 306, 89, 23);
 		frame.getContentPane().add(btnAceptar);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Madrid", "Ciudad Real", "Zaragoza", "Albacete"}));
+		comboBox.setBounds(285, 128, 111, 20);
+		frame.getContentPane().add(comboBox);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(285, 240, 111, 20);
+		frame.getContentPane().add(passwordField);
+		
+		JLabel lblNewLabel = new JLabel("Login");
+		lblNewLabel.setBounds(206, 216, 69, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblPasword = new JLabel("Pasword");
+		lblPasword.setBounds(206, 243, 69, 14);
+		frame.getContentPane().add(lblPasword);
+		
+		textField = new JTextField();
+		textField.setBounds(285, 213, 111, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
 	}
 }
