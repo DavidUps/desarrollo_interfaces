@@ -98,8 +98,10 @@ public class CalculadoraBorderLayout {
 				if(Integer.parseInt(n1.getText())>0 && Integer.parseInt(n2.getText())>0 && n1.getText().length()>0 && n2.getText().length()>0) {
 					total=Integer.parseInt(n1.getText())+Integer.parseInt(n2.getText());
 					resultado.setText(String.valueOf(total));
-				}else
-					JOptionPane.showMessageDialog(null, "Error", "Error", , JOptionPane.ERROR_MESSAGE);
+				}
+				if(Integer.parseInt(n1.getText())<0 && Integer.parseInt(n2.getText())<0 && n1.getText().length()<0 && n2.getText().length()<0) {
+					JOptionPane.showMessageDialog(null,"Error","Error",JOptionPane.ERROR_MESSAGE);
+				}	
 			}
 		});
 		panel_9.add(suma);
