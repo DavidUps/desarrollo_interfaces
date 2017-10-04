@@ -13,26 +13,30 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import javax.swing.JRadioButton;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
 
 public class Sudoku {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
-	private JTextField textField_15;
+	private JTextField pos_1;
+	private JTextField pos_2;
+	private JTextField pos_3;
+	private JTextField pos_4;
+	private JTextField pos_5;
+	private JTextField pos_6;
+	private JTextField pos_7;
+	private JTextField pos_8;
+	private JTextField pos_9;
+	private JTextField pos_10;
+	private JTextField pos_11;
+	private JTextField pos_12;
+	private JTextField pos_13;
+	private JTextField pos_14;
+	private JTextField pos_15;
+	private JTextField pos_16;
 	private JPanel panel_1;
 	private JPanel panel_2;
 	private JPanel panel_3;
@@ -42,11 +46,12 @@ public class Sudoku {
 	private JButton btnManual;
 	private JLabel lblNewLabel;
 	private JButton btnRestar;
-	private JCheckBox chckbxMostarSombreado;
+	private JCheckBox sombreado;
 	private JButton btnNewButton;
 	private JRadioButton rdbtnNewRadioButton;
 	private JRadioButton rdbtnNewRadioButton_1;
 	private JLabel lblSuroku;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -76,6 +81,7 @@ public class Sudoku {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
@@ -84,69 +90,95 @@ public class Sudoku {
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(new GridLayout(4, 4, 0, 0));
 		
-		textField = new JTextField();
-		panel.add(textField);
-		textField.setColumns(10);
+		pos_1 = new JTextField();
+		pos_1.setBackground(Color.WHITE);
+		pos_1.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_1.setText("2");
+		pos_1.setSelectedTextColor(Color.LIGHT_GRAY);
+		pos_1.setForeground(Color.BLACK);
+		panel.add(pos_1);
+		pos_1.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		panel.add(textField_1);
+		pos_2 = new JTextField();
+		pos_2.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_2.setColumns(10);
+		panel.add(pos_2);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		panel.add(textField_2);
+		pos_3 = new JTextField();
+		pos_3.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_3.setColumns(10);
+		panel.add(pos_3);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		panel.add(textField_3);
+		pos_4 = new JTextField();
+		pos_4.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_4.setColumns(10);
+		panel.add(pos_4);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		panel.add(textField_4);
+		pos_5 = new JTextField();
+		pos_5.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_5.setColumns(10);
+		panel.add(pos_5);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		panel.add(textField_5);
+		pos_6 = new JTextField();
+		pos_6.setText("3");
+		pos_6.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_6.setColumns(10);
+		panel.add(pos_6);
 		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
-		panel.add(textField_6);
+		pos_7 = new JTextField();
+		pos_7.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_7.setColumns(10);
+		panel.add(pos_7);
 		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
-		panel.add(textField_7);
+		pos_8 = new JTextField();
+		pos_8.setText("4");
+		pos_8.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_8.setColumns(10);
+		panel.add(pos_8);
 		
-		textField_8 = new JTextField();
-		textField_8.setColumns(10);
-		panel.add(textField_8);
+		pos_9 = new JTextField();
+		pos_9.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_9.setText("3");
+		pos_9.setColumns(10);
+		panel.add(pos_9);
 		
-		textField_9 = new JTextField();
-		textField_9.setColumns(10);
-		panel.add(textField_9);
+		pos_10 = new JTextField();
+		pos_10.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_10.setColumns(10);
+		panel.add(pos_10);
 		
-		textField_10 = new JTextField();
-		textField_10.setColumns(10);
-		panel.add(textField_10);
+		pos_11 = new JTextField();
+		pos_11.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_11.setColumns(10);
+		panel.add(pos_11);
 		
-		textField_11 = new JTextField();
-		textField_11.setColumns(10);
-		panel.add(textField_11);
+		pos_12 = new JTextField();
+		pos_12.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_12.setText("1");
+		pos_12.setColumns(10);
+		panel.add(pos_12);
 		
-		textField_12 = new JTextField();
-		textField_12.setColumns(10);
-		panel.add(textField_12);
+		pos_13 = new JTextField();
+		pos_13.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_13.setText("4");
+		pos_13.setColumns(10);
+		panel.add(pos_13);
 		
-		textField_13 = new JTextField();
-		textField_13.setColumns(10);
-		panel.add(textField_13);
+		pos_14 = new JTextField();
+		pos_14.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_14.setColumns(10);
+		panel.add(pos_14);
 		
-		textField_14 = new JTextField();
-		panel.add(textField_14);
-		textField_14.setColumns(10);
+		pos_15 = new JTextField();
+		pos_15.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_15.setText("3");
+		panel.add(pos_15);
+		pos_15.setColumns(10);
 		
-		textField_15 = new JTextField();
-		textField_15.setColumns(10);
-		panel.add(textField_15);
+		pos_16 = new JTextField();
+		pos_16.setHorizontalAlignment(SwingConstants.CENTER);
+		pos_16.setColumns(10);
+		panel.add(pos_16);
 		
 		panel_1 = new JPanel();
 		frame.getContentPane().add(panel_1, BorderLayout.NORTH);
@@ -159,10 +191,14 @@ public class Sudoku {
 		panel_2.setLayout(new GridLayout(1, 2, 0, 0));
 		
 		rdbtnNewRadioButton = new JRadioButton("Redimensionar Si");
+		
+		buttonGroup.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(rdbtnNewRadioButton);
 		
 		rdbtnNewRadioButton_1 = new JRadioButton("Redimensionar No");
+		
+		buttonGroup.add(rdbtnNewRadioButton_1);
 		rdbtnNewRadioButton_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(rdbtnNewRadioButton_1);
 		
@@ -188,13 +224,77 @@ public class Sudoku {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel);
 		
-		btnRestar = new JButton("Reiniciar");
-		panel_4.add(btnRestar);
 		
-		chckbxMostarSombreado = new JCheckBox("Mostar Sombreado");
-		panel_4.add(chckbxMostarSombreado);
+		sombreado = new JCheckBox("Mostar Sombreado");
+		
 		
 		btnNewButton = new JButton("Salir");
+		
+		
+		//SOMBREADO
+		
+		sombreado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(sombreado.isSelected()) {
+					pos_1.setBackground(Color.LIGHT_GRAY);
+					pos_6.setBackground(Color.LIGHT_GRAY);
+					pos_8.setBackground(Color.LIGHT_GRAY);
+					pos_9.setBackground(Color.LIGHT_GRAY);
+					pos_12.setBackground(Color.LIGHT_GRAY);
+					pos_13.setBackground(Color.LIGHT_GRAY);
+					pos_15.setBackground(Color.LIGHT_GRAY);
+				}else {
+					pos_1.setBackground(Color.white);
+					pos_6.setBackground(Color.white);
+					pos_8.setBackground(Color.white);
+					pos_9.setBackground(Color.white);
+					pos_12.setBackground(Color.white);
+					pos_13.setBackground(Color.white);
+					pos_15.setBackground(Color.white);
+				}
+			}
+		});
+		
+		btnRestar = new JButton("Reiniciar");
+		
+		//REINICIAR
+		btnRestar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				pos_2.setText("");
+				pos_3.setText("");
+				pos_4.setText("");
+				pos_5.setText("");
+				pos_7.setText("");
+				pos_10.setText("");
+				pos_11.setText("");
+				pos_14.setText("");
+				pos_16.setText("");
+			}
+		});
+		panel_4.add(btnRestar);
+		panel_4.add(sombreado);
+		
+		//REDIMENSIONAR
+		rdbtnNewRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton.isSelected())
+					frame.setResizable(true);
+			}
+		});
+		rdbtnNewRadioButton.setSelected(true);
+		rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton_1.isSelected())
+					frame.setResizable(false);
+			}
+		});
+		
+		//SALIR
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		panel_4.add(btnNewButton);
 	}
 
