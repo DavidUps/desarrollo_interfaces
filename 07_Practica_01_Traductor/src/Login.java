@@ -3,8 +3,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Login {
 
@@ -33,6 +36,7 @@ public class Login {
 	 */
 	public Login() {
 		initialize();
+		frmLogin.setVisible(true);
 	}
 
 	/**
@@ -62,13 +66,38 @@ public class Login {
 		contraseña_login = new JPasswordField();
 		contraseña_login.setBounds(223, 114, 104, 20);
 		frmLogin.getContentPane().add(contraseña_login);
+
 		
-		JButton registro_login = new JButton("Registro");
-		registro_login.setBounds(104, 217, 104, 23);
-		frmLogin.getContentPane().add(registro_login);
+		//Traductor
 		
 		JButton traductor_login = new JButton("Traductor");
+		traductor_login.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String contraseña ="";
+				char pass[] = contraseña_login.getPassword();
+				for(int i=0; i<pass.length; i++) {
+					contraseña+=pass[i];
+				}
+				if(contraseña == usuario_login.getText().toString()){
+					Traductor traductor = new Traductor();
+					frmLogin.dispose();
+				}else
+					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta");
+			}
+		});
 		traductor_login.setBounds(223, 217, 104, 23);
 		frmLogin.getContentPane().add(traductor_login);
+		
+		//Registro
+		
+		JButton registro_login = new JButton("Registro");
+		registro_login.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Registro registro = new Registro();
+				frmLogin.dispose();
+			}
+		});
+		registro_login.setBounds(104, 217, 104, 23);
+		frmLogin.getContentPane().add(registro_login);
 	}
 }
