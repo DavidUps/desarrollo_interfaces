@@ -6,6 +6,12 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.awt.event.ActionEvent;
 import java.awt.Component;
 import java.awt.Color;
@@ -20,6 +26,7 @@ public class Traductor {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -30,7 +37,68 @@ public class Traductor {
 				}
 			}
 		});
-	}
+		
+		// TODO Auto-generated method stub
+		
+				String palabra = "adios";
+				URL web = null;
+				InputStream contenido = null;
+				String pagWeb = "";
+				
+				try {
+					web = new URL("http://www.wordreference.com/es/en/translation.asp?spen="+palabra);
+				} catch (MalformedURLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+				try {
+					contenido = web.openStream();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				// Convertir InputStream en String
+				pagWeb = getStringFromInputStream(contenido);
+				
+				System.out.println(pagWeb);
+				
+			}
+			
+			// convert InputStream to String
+				private static String getStringFromInputStream(InputStream is) {
+
+					BufferedReader br = null;
+					StringBuilder sb = new StringBuilder();
+
+					String line;
+					try {
+
+						br = new BufferedReader(new InputStreamReader(is));
+						while ((line = br.readLine()) != null) {
+							sb.append(line);
+						}
+
+					} catch (IOException e) {
+						e.printStackTrace();
+					} finally {
+						if (br != null) {
+							try {
+								br.close();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+					}
+
+					return sb.toString();
+
+				}
+
+	
 
 	/**
 	 * Create the application.
@@ -64,7 +132,7 @@ public class Traductor {
 		frmTraductor.getContentPane().add(palabra_traductor);
 		palabra_traductor.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Traducir");
+		JButton Btn_traductor = new JButton("Traducir");
 		
 		
 		JLabel lblNewLabel = new JLabel("Palabra Traducida");
@@ -88,14 +156,15 @@ public class Traductor {
 		loguin_traductor.setBounds(345, 237, 89, 23);
 		frmTraductor.getContentPane().add(loguin_traductor);
 		
-		//TRADUCIR
-		btnNewButton.addActionListener(new ActionListener() {
+		//TRADUCIRhola
+		Btn_traductor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("HOLA CARACOLA");
+				String palabra = palabra_traductor.getText().toString();
+				palabra_traducida_traductor.setText(pagWeb);
 			}
 		});
-		btnNewButton.setBounds(10, 102, 424, 40);
-		frmTraductor.getContentPane().add(btnNewButton);
+		Btn_traductor.setBounds(10, 102, 424, 40);
+		frmTraductor.getContentPane().add(Btn_traductor);
 	}
 
 }
