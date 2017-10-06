@@ -2,6 +2,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
@@ -21,6 +22,7 @@ public class Registro {
 	private JTextField apellido_registro;
 	private JTextField correo_registro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private final ButtonGroup buttonGroup_1 = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -66,7 +68,7 @@ public class Registro {
 		frmRegistro.getContentPane().add(lblApellido);
 		
 		JLabel lblCorreoElectrnico = new JLabel("Correo electr\u00F3nico *");
-		lblCorreoElectrnico.setBounds(220, 23, 109, 14);
+		lblCorreoElectrnico.setBounds(220, 23, 121, 14);
 		frmRegistro.getContentPane().add(lblCorreoElectrnico);
 		
 		JLabel lblFechaNacimiento = new JLabel("Fecha nacimiento");
@@ -158,7 +160,9 @@ public class Registro {
 				   ){
 					Traductor traductor = new Traductor();
 					frmRegistro.dispose();
-				}
+				}else
+					JOptionPane.showMessageDialog(null, "Faltan campos", "Empty",
+							JOptionPane.WARNING_MESSAGE);
 			}
 		});
 		aceptar_registro.setBounds(313, 237, 121, 23);

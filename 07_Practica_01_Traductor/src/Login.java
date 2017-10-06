@@ -73,19 +73,14 @@ public class Login {
 		JButton traductor_login = new JButton("Traductor");
 		traductor_login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String user = usuario_login.getText().toString();
-				String contraseña ="";
-				char pass[] = contraseña_login.getPassword();
-				for(int i=0; i<pass.length; i++) {
-					contraseña+=pass[i];
-				}
-				if(contraseña == user){
+				
+				if (!usuario_login.getText().isEmpty() && !contraseña_login.getText().isEmpty() && usuario_login.getText().equals(contraseña_login.getText())) {
 					Traductor traductor = new Traductor();
 					frmLogin.dispose();
-				}else
-					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta");
-					System.out.println(contraseña);
-					System.out.println(user);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "Login Error", JOptionPane.ERROR_MESSAGE);
+				}		
 			}
 		});
 		traductor_login.setBounds(223, 217, 104, 23);
