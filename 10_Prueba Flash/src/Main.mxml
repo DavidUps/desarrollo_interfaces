@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"  pageTitle="Mi primer Flash">
+	
+	<fx:Script>
+		<![CDATA[
+			import spark.events.IndexChangeEvent;
+			import spark.events.TextOperationEvent;
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				texto1.text = "Pulsado";	
+				
+			}
+			
+			protected function textinput1_changeHandler(event:TextOperationEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+			protected function textarea1_changeHandler(event:TextOperationEvent):void
+			{
+				// TODO Auto-generated method stub
+				texto1.setStyle("contentBackgroundColor", "ff0000");
+				
+			}
+			
+			protected function check_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(check.selected == true)
+				{
+					area.text = "Checkeado";
+				}else
+					area.text = "No chekeado";
+			}
+			
+			protected function combo_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				area.text = combo.selectedItem;
+			}
+			
+			protected function list1_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				area.text =  list.selectedItem;	
+			}
+			
+			protected function radiobutton1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(hombre.selected == true)
+				{
+					this.setStyle("backgroundColor", "#04a8e5");
+				}else
+					this.setStyle("backgroundColor", "white");
+			}
+			
+			protected function image1_mouseOverHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				area.text = "*.*";
+				foto.setVisible(false);
+				this.setStyle("backgroundColor", "black");
+			}
+			
+			protected function foto_mouseOutHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				area.text = "*.-";
+			 	foto.setVisible(true);
+				this.setStyle("backgroundColor", "white");
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup1"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Button x="193" y="211" width="201" label="Pulsar" click="button1_clickHandler(event)"/>
+	<s:TextInput id="texto1" x="451" y="210" change="textinput1_changeHandler(event)"
+				 prompt="Escribir usuario"/>
+	<s:TextArea id="area" x="635" y="210" width="113" height="65"
+				change="textarea1_changeHandler(event)"/>
+	<s:ComboBox id="combo" x="455" y="356" width="124" change="combo_changeHandler(event)"
+				selectedIndex="-1">
+		<s:ArrayList>
+			<fx:String>Austin</fx:String>
+			<fx:String>Damian</fx:String>
+			<fx:String>Alfredo</fx:String>
+			<fx:String>Daniel</fx:String>
+		</s:ArrayList>
+	</s:ComboBox>
+	<s:CheckBox id="check" x="193" y="361" width="198" label="Acepta los terminos"
+				click="check_clickHandler(event)" selected="true"/>
+	<s:Label x="193" y="257" width="47" height="18" text="Sexo:"/>
+	<s:RadioButton id="hombre" x="248" y="257" label="Hombre"
+				   click="radiobutton1_clickHandler(event)" selected="true"/>
+	<s:RadioButton id="mujer" x="345" y="257" label="Mujer"/>
+	<s:Label x="193" y="303" text="Mascota"/>
+	<s:RadioButton x="248" y="297" label="Garo"/>
+	<s:RadioButton x="342" y="297" label="Perro"/>
+	<s:VGroup x="451" y="257" width="128" height="58">
+		<s:RadioButton label="Perro" groupName="radiogroup1"/>
+		<s:RadioButton label="Gato" groupName="radiogroup1"/>
+	</s:VGroup>
+	<mx:DateChooser x="598" y="296" width="166" height="158"/>
+	<mx:DateField x="193" y="396" width="206" formatString="DD-MM-YYYY"/>
+	<s:Image id="foto" x="772" y="210" width="370" height="244"
+			 mouseOut="foto_mouseOutHandler(event)" mouseOver="image1_mouseOverHandler(event)"
+			 scaleMode="stretch" smooth="true"
+			 source="assets/car_shiny_motor_vehicle_sports_car_auto-1410206.jpg!d.jfif"/>
+	<s:List id="list" x="193" y="442" width="206" height="161" change="list1_changeHandler(event)"
+			selectedIndex="1">
+		<s:ArrayList>
+			<fx:String>Atustin</fx:String>
+			<fx:String>Damian</fx:String>
+			<fx:String>Alfredo</fx:String>
+			<fx:String>Daniel</fx:String>
+			<fx:String>Paco</fx:String>
+			<fx:String>Alfonso</fx:String>
+			<fx:String>Joselito</fx:String>
+			<fx:String>Jose Carlos</fx:String>
+			<fx:String>Damian</fx:String>
+			<fx:String>Agustin</fx:String>
+			<fx:String>Guillermo</fx:String>
+			<fx:String>Armando</fx:String>
+			<fx:String>Angel</fx:String>
+		</s:ArrayList>
+	</s:List>
+</s:Application>
