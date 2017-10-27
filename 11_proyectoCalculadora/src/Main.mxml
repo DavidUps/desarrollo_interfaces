@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			var activar:Boolean = false;
+			//BotonLogin
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				if(accesoLogin.text == accesoPass.text && accesoLogin.text !="" && accesoPass.text !="")
+				{
+					activar = true;
+				}else
+				{
+					Alert.show('El Usuario o contraseña son incorrectos, por favor intentelo de nuevo', 'Error Login', mx.controls.Alert.OK);
+				}
+			}
+			
+			protected function accesoCalculadora_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(accesoCalculadora.selected && activar == true)
+				{
+					calculadora.enabled=true;
+					teorema.enabled=false;
+				}
+			}
+			
+			protected function accesoPitagoras_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(accesoPitagoras.enabled && activar == true)
+				{
+					teorema.enabled=true;
+					calculadora.enabled=false;
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel id="acceso" x="338" y="83" width="339" height="192" fontFamily="Arial" fontSize="15"
+			 fontWeight="bold" title="Acceso">
+		<s:TextInput id="accesoLogin" x="10" y="10" width="180" height="28" fontWeight="normal"
+					 prompt="Login"/>
+		<s:TextInput id="accesoPass" x="10" y="50" width="180" height="28" displayAsPassword="true"
+					 fontWeight="normal" prompt="Password"/>
+		<s:Button id="accesoLoginBtn" x="59" y="103" width="88" height="30" label="Login"
+				  click="button1_clickHandler(event)" enabled="true" fontWeight="normal"/>
+		<s:Button id="accesoLogoutBtn" x="195" y="103" width="88" height="30" label="Logout"
+				  fontWeight="normal"/>
+		<s:Label x="198" y="10" width="103" height="17" fontWeight="normal" text="Activar:"
+				 verticalAlign="bottom"/>
+		<s:RadioButton id="accesoCalculadora" x="198" y="35" width="129" label="Calculadora"
+					   click="accesoCalculadora_clickHandler(event)" enabled="true"
+					   fontWeight="normal" selected="true"/>
+		<s:RadioButton id="accesoPitagoras" x="198" y="60" width="129" label="Pitágoras"
+					   click="accesoPitagoras_clickHandler(event)" enabled="true"
+					   fontWeight="normal"/>
+	</s:Panel>
+	<s:Panel id="calculadora" x="702" y="83" width="276" height="393" enabled="false"
+			 fontFamily="Arial" fontSize="15" fontWeight="bold" title="Calculadora Sencilla">
+		<s:TextArea id="calculadoraNum" x="10" y="10" width="254" height="26" editable="false"
+					enabled="false" fontFamily="Arial" fontWeight="bold" text="2323"
+					textAlign="right" verticalAlign="middle"/>
+		<s:TextArea id="calculadoraRes" x="10" y="44" width="254" height="50" editable="false"
+					enabled="false" fontSize="35" fontWeight="normal" text="2323" textAlign="right"
+					verticalAlign="middle"/>
+		<s:Button id="calculadoraBorrar" x="10" y="294" width="57" height="56" label="C"
+				  fontSize="29" fontWeight="normal"/>
+		<s:Button id="calculadora7" x="10" y="230" width="57" height="56" label="7" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora4" x="10" y="166" width="57" height="56" label="4" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora1" x="10" y="102" width="57" height="56" label="1" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora2" x="75" y="102" width="57" height="56" label="2" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadoraSum" x="207" y="102" width="57" height="56" label="+" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora3" x="142" y="102" width="57" height="56" label="3" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora5" x="75" y="166" width="57" height="56" label="5" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora6" x="140" y="166" width="57" height="56" label="6" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadoraResta" x="207" y="166" width="57" height="56" label="-" fontSize="29"
+				  fontWeight="normal"/>
+		
+		<s:Button id="calculadora8" x="75" y="230" width="57" height="56" label="8" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora9" x="140" y="230" width="57" height="56" label="9" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadoraMult" x="207" y="230" width="57" height="56" label="X" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadora0" x="75" y="294" width="57" height="56" label="0" fontSize="29"
+				  fontWeight="normal"/>
+		<s:Button id="calculadoraIgual" x="140" y="294" width="57" height="56" label="="
+				  fontSize="29" fontWeight="normal"/>
+		<s:Button id="calculadoraDiv" x="207" y="294" width="57" height="56" label="/" fontSize="29"
+				  fontWeight="normal"/>
+	</s:Panel>
+	<s:Panel id="teorema" x="338" y="284" width="339" height="193" enabled="false" fontFamily="Arial"
+			 fontSize="15" fontWeight="bold" title="Teorema de Pitágoras">
+		<s:Button id="teoremaReiniciar" x="199" y="-28" width="128" height="24" label="Reiniciar"
+				  fontWeight="normal"/>
+		<s:TextInput id="teoremaCateto1" x="199" y="8" width="128" height="38" fontFamily="Verdana"
+					 fontWeight="normal" prompt="Cateto 1"/>
+		<s:TextInput id="teoremaCateto2" x="199" y="54" width="128" height="38" fontFamily="Verdana"
+					 fontWeight="normal" prompt="Cateto 2"/>
+		<s:TextInput id="teoremaHipotenusa" x="199" y="100" width="128" height="38" enabled="false"
+					 fontFamily="Verdana" fontWeight="normal" prompt="Hipotenusa"/>
+		<s:Image id="teoremaImg" x="10" y="29" width="181" height="88" scaleMode="zoom" smooth="true"
+				 source="assets/triangulo.png"/>
+	</s:Panel>
+</s:Application>
