@@ -1,0 +1,9 @@
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\bin\Debug\Ruta.exe.config
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\bin\Debug\Ruta.exe
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\bin\Debug\Ruta.pdb
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.csprojResolveAssemblyReference.cache
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.Form1.resources
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.Properties.Resources.resources
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.csproj.GenerateResource.Cache
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.exe
+c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Ruta\obj\Debug\Ruta.pdb
