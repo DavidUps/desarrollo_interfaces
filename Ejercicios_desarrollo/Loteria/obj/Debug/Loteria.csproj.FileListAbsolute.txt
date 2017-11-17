@@ -1,0 +1,10 @@
+c:\users\cfgs\documents\visual studio 2015\Projects\Ejercicios\Loteria\bin\Debug\Loteria.exe.config
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\bin\Debug\Loteria.exe.config
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\bin\Debug\Loteria.exe
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\bin\Debug\Loteria.pdb
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.csprojResolveAssemblyReference.cache
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.Form1.resources
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.Properties.Resources.resources
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.exe
+C:\Users\CFGS\Documents\Visual Studio 2015\Projects\Ejercicios_desarrollo\Loteria\obj\Debug\Loteria.pdb
