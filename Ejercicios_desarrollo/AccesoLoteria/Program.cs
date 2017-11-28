@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Loteria
+namespace AccesoLoteria
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Loteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loterias());
+            Application.Run(new Acceso());
         }
     }
 }

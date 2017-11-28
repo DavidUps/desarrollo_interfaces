@@ -1,0 +1,10 @@
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\bin\Debug\AccesoLoteria.exe.config
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\bin\Debug\AccesoLoteria.exe
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\bin\Debug\AccesoLoteria.pdb
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.Properties.Resources.resources
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.exe
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.pdb
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.Acceso.resources
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\AccesoLoteria.Lot.resources
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\Ejercicios_desarrollo\AccesoLoteria\obj\Debug\Loteria.Loterias.resources

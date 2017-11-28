@@ -1,6 +1,6 @@
 ﻿namespace Loteria
 {
-    partial class Form1
+    partial class Loterias
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -428,6 +428,7 @@
             this.salir.TabIndex = 2;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = true;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // apostar
             // 
@@ -437,6 +438,7 @@
             this.apostar.TabIndex = 1;
             this.apostar.Text = "Apostar";
             this.apostar.UseVisualStyleBackColor = true;
+            this.apostar.Click += new System.EventHandler(this.apostar_Click);
             // 
             // lista
             // 
@@ -446,7 +448,7 @@
             this.lista.Size = new System.Drawing.Size(156, 134);
             this.lista.TabIndex = 0;
             // 
-            // Form1
+            // Loterias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -454,7 +456,7 @@
             this.Controls.Add(this.resguardo);
             this.Controls.Add(this.loteria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
+            this.Name = "Loterias";
             this.Text = "Loterias DAM";
             this.loteria.ResumeLayout(false);
             this.loteria.PerformLayout();

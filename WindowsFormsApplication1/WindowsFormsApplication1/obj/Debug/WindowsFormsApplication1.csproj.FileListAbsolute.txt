@@ -10,3 +10,6 @@ c:\users\cfgs\documents\visual studio 2015\Projects\WindowsFormsApplication1\Win
 C:\Users\David\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\David\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\David\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\CFGS\Documents\GitHub\desarrollo_interfaces\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

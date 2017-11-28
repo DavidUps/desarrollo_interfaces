@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Loteria
 {
-    public partial class Form1 : Form
+    public partial class Loterias : Form
     {
         CheckBox[] checkbox = new CheckBox[16];
         Random random = new Random();
         int contador = 0;
-        public Form1()
+        public Loterias()
         {
             InitializeComponent();
             checkbox[0] = checkBox1;
@@ -245,6 +245,20 @@ namespace Loteria
         {
             if (checkBox16.Checked)
                 contador++;
+        }
+
+        private void apostar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            string mensaje = "Desea Salir";
+            string titulo = "Desea salir";
+            MessageBoxButtons opciones = MessageBoxButtons.OK;
+            DialogResult result = MessageBox.Show(mensaje, titulo, opciones, MessageBoxIcon.Exclamation);
+            this.Visible = false;
         }
     }
 }
